@@ -8,7 +8,7 @@ import Amplify from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
 
-const initialFormState = { name: '', description: '' }
+const initialFormState = { name: '', description: ''}
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -77,10 +77,10 @@ function App() {
             <div key={note.id || note.name}>
               <h2>{note.name}</h2>
               <p>{note.description}</p>
-              <button onClick={() => deleteNote(note)}>Delete note</button>
               {
                 note.image && <img src={note.image} style={{width: 400}} />
               }
+              <p><button onClick={() => deleteNote(note)}>Delete note</button></p>
             </div>
           ))
         }
