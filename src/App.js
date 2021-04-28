@@ -70,7 +70,7 @@ function App() {
         value={formData.description}
       />
       <input type="file" onChange={onChange}/>
-      <button onClick={createNote}>Create Note</button>
+      <button onClick={createNote}>Create Notes</button>
       <div style={{marginBottom: 50}}>
         {
           notes.map(note => (
